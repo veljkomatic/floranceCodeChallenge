@@ -15,4 +15,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(fileUpload());
 
+require('../controllers')({ router: app });
+
 module.exports = app;
