@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>API Documentation</title>
+      <link rel="stylesheet" href="css/foundation.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css" />
+      <link rel="stylesheet" type="text/css" href="css/highlight.github.css" />
+      
+        <link rel="stylesheet" type="text/css" href="custom.css" />
+      
+  </head>
+
+
+  <body class="antialiased hide-extras">
+
+    <div class="sidebar-top">
+  <div class="logo"></div>
+  API Documentation
+</div>
+
+<div class="sidebar">
+  
+  <form>
+    <input tabindex="1" id="autocomplete" type="search"
+          placeholder="search" autocomplete="off" />
+  </form>
+
+  <nav>
+    <ul class="side-nav">
+
+      
+
+          <li class="divider"></li>
+
+          <li class="heading">
+            <a href="get--issues.html">GET /issues</a>
+          </li>
+
+          
+            <li>
+              <a href="get--issues.html#should-get-all-issues" data-search="should get all issues">
+                should get all issues
+                
+                  <span class="label">1</span>
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="get--issues.html#should-get-specific-issue" data-search="should get specific issue">
+                should get specific issue
+                
+                  <span class="label">1</span>
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="get--issues.html#should-return-----of-an-issue-does-not-exist" data-search="should return 404 of an issue does not exist">
+                should return 404 of an issue does not exist
+                
+                  <span class="label">1</span>
+                
+              </a>
+            </li>
+          
+
+      
+
+          <li class="divider"></li>
+
+          <li class="heading">
+            <a href="post--issues.html">POST /issues</a>
+          </li>
+
+          
+            <li>
+              <a href="post--issues.html#should-create-a-new-issue" data-search="should create a new issue">
+                should create a new issue
+                
+                  <span class="label">1</span>
+                
+              </a>
+            </li>
+          
+
+      
+
+    </ul>
+  </nav>
+
+</div>
+
+
+    <div class="content-top"></div>
+    <div class="content">
+
+      <h1>POST /issues</h1>
+
+      
+        <div class="group">
+          <a name="should-create-a-new-issue"></a>
+          <h2>should create a new issue</h2>
+          <ul class="samples">
+            
+              <li>
+                <div class="summary">
+  <p>should create a new issue</p>
+
+</div>
+
+<div class="operation">
+
+  <div class="method color-POST">
+    POST
+  </div>
+
+  <div class="request">
+    <div class="url">
+      POST
+      
+        <pre><code>/issues</code></pre>
+      
+    </div>
+    Sample request
+    <div class="expanders">
+      
+        <a href="#sample3-url">url</a><span>
+      
+      
+        <a href="#sample3-request-headers">headers</a><span>
+      
+      
+        <a href="#sample3-request-payload">payload</a>
+      
+      
+      <a href="#sample3-request-curl">curl</a><span>
+    </div>
+  </div>
+
+  <div id="sample3-url" class="collapsible">
+    <pre><code>/issues</code></pre>
+  </div>
+  <div id="sample3-request-headers" class="collapsible">
+    <pre><code><span class="hljs-attribute">content-type</span>: <span class="hljs-string">application/json</span>
+<span class="hljs-attribute">content-length</span>: <span class="hljs-string">42</span>
+</code></pre>
+  </div>
+  <div id="sample3-request-payload" class="collapsible">
+    <pre><code>{
+  "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Health"</span></span>,
+  "<span class="hljs-attribute">content</span>": <span class="hljs-value"><span class="hljs-string">"Health care"</span>
+</span>}</code></pre>
+  </div>
+  <div id="sample3-request-attachments" class="collapsible">
+    
+  </div>
+  <div id="sample3-request-curl" class="collapsible">
+    <pre><code class="wrap">curl -X POST -H <span class="hljs-string">"content-type: application/json"</span> -H <span class="hljs-string">"content-length: 42"</span> -d <span class="hljs-string">'{"</span>title<span class="hljs-string">":"</span>Health<span class="hljs-string">","</span>content<span class="hljs-string">":"</span>Health care<span class="hljs-string">"}'</span> <span class="hljs-string">"http://localhost/issues"</span></code></pre>
+  </div>
+
+  <div class="response">
+    Response 200 OK
+    <div class="expanders">
+      
+      
+        <a href="#sample3-response-body">body</a>
+      
+    </div>
+  </div>
+
+  <div id="sample3-response-headers" class="collapsible">
+    <pre><code></code></pre>
+  </div>
+  <div id="sample3-response-body" class="collapsible">
+    <pre><code>{
+  "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Health"</span></span>,
+  "<span class="hljs-attribute">content</span>": <span class="hljs-value"><span class="hljs-string">"Health care"</span></span>,
+  "<span class="hljs-attribute">filesUrl</span>": <span class="hljs-value">[]</span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"5ad4bb8c0a2537243f851fd0"</span>
+</span>}</code></pre>
+  </div>
+
+</div>
+
+              </li>
+            
+          </ul>
+        </div>
+      
+      
+    </div>
+
+    <footer>
+  <div class="row">
+    <div class="medium-8 columns">
+      <ul class="no-bullet">
+        <li>
+          Documentation generated on April 16th 2018, 5:04 pm
+        </li>
+        <li>
+          <a href="http://github.com/rprieto/supersamples">
+            Powered by supersamples
+            <div class="logo">
+              <div class="swatch color-GET"></div>
+              <div class="swatch color-POST"></div>
+              <div class="swatch color-PUT"></div>
+              <div class="swatch color-DELETE"></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="scripts/zepto.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+  </body>
+
+</html>

@@ -48,13 +48,27 @@ describe('GET /issues', () => {
 });
 
 describe('POST /issues', () => {
-    it('should create a new policies', (done) => {
+    it('should create a new issue', (done) => {
         request(app)
             .post('/issues')
             .field('title', 'Health')
             .field('content', 'Health care')
             .attach('file', `${__dirname}/file.jpg`)
             .attach('file', `${__dirname}/health.pdf`)
+            .expect(200)
+            .expect((res) => {
+                expect(res.body).toBeTruthy();
+            })
+            .set('SupersamplesIgnore', 'true')
+            .end(done);
+    });
+    it('should create a new issue', (done) => {
+        request(app)
+            .post('/issues')
+            .send({
+                title: 'Health',
+                content: 'Health care'
+            })
             .expect(200)
             .expect((res) => {
                 expect(res.body).toBeTruthy();

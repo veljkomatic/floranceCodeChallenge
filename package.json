@@ -24,6 +24,7 @@
     "mocha": "^5.1.0",
     "sinon": "^4.5.0",
     "sinon-stub-promise": "^4.0.0",
+    "supersamples": "^1.4.0",
     "supertest": "^3.0.0"
   }
 }
