@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "mocha --recursive  tests",
+    "test": "mocha --recursive --timeout 20000  tests",
     "start": "./scripts/dev.sh"
   },
   "dependencies": {
@@ -22,6 +22,8 @@
   "devDependencies": {
     "expect": "^22.4.3",
     "mocha": "^5.1.0",
+    "sinon": "^4.5.0",
+    "sinon-stub-promise": "^4.0.0",
     "supertest": "^3.0.0"
   }
 }
